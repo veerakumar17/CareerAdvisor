@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import './CareerDetail.css';
 
 const CareerDetail = () => {
-  const { id } = useParams();
 
   const careerData = {
     title: 'Software Engineer',
