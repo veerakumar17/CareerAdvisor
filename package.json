@@ -1,0 +1,15 @@
+{
+  "name": "career-advisor",
+  "private": true,
+  "workspaces": [
+    "career-advisor-backend",
+    "career-advisor-frontend",
+    "career-advisor-vite"
+  ],
+  "scripts": {
+    "bootstrap": "echo 'Install dependencies in each workspace'",
+    "build:frontend": "cd career-advisor-frontend && npm run build",
+    "build:backend": "cd career-advisor-backend && npm install",
+    "build:vite": "cd career-advisor-vite && npm run build"
+  }
+}
