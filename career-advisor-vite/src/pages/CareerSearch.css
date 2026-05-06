@@ -1,0 +1,138 @@
+.career-search-page {
+  min-height: calc(100vh - 70px);
+  padding: 60px 20px;
+  background: var(--light);
+}
+
+.career-search-page h1 {
+  text-align: center;
+  font-size: 42px;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+.search-filters {
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.careers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.career-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.career-card h3 {
+  font-size: 24px;
+  color: var(--text);
+  margin: 0;
+}
+
+.career-card p {
+  color: var(--text);
+  opacity: 0.8;
+  flex-grow: 1;
+}
+
+.career-info {
+  display: flex;
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.skills-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  padding: 6px 12px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.card-actions .btn {
+  flex: 1;
+}
+
+.btn-saved {
+  background: #ef4444;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 20px;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .careers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .filters select {
+    width: 100%;
+  }
+}

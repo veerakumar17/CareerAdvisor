@@ -1,0 +1,161 @@
+.results-page {
+  min-height: calc(100vh - 70px);
+  padding: 60px 20px;
+  background: var(--light);
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.results-header h1 {
+  font-size: 42px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.results-header p {
+  font-size: 18px;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.recommendation-card {
+  position: relative;
+  padding: 32px;
+  text-align: center;
+}
+
+.rank-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--gradient);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.career-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.recommendation-card h3 {
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.career-desc {
+  color: var(--text);
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.match-section {
+  margin-bottom: 24px;
+}
+
+.match-label {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.match-bar-container {
+  height: 40px;
+  background: var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.match-bar {
+  height: 100%;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 16px;
+  transition: width 1s ease;
+  animation: fillBar 1.5s ease-out;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+}
+
+.match-percentage {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reasons-section {
+  text-align: left;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: var(--light);
+  border-radius: 12px;
+}
+
+.reasons-section h4 {
+  color: var(--text);
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.reasons-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reasons-section li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.check-icon {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .results-header h1 {
+    font-size: 32px;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    padding: 24px;
+  }
+}

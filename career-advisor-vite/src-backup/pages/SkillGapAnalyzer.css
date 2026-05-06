@@ -1,0 +1,211 @@
+.skill-gap-page {
+  min-height: calc(100vh - 70px);
+  padding: 60px 20px;
+  background: var(--light);
+}
+
+.skill-gap-page h1 {
+  text-align: center;
+  font-size: 42px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--text);
+  opacity: 0.7;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.career-selector {
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+
+.career-selector label {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.career-selector select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: var(--text);
+}
+
+.match-overview {
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.match-overview h3 {
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.circular-progress {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.match-overview p {
+  font-size: 18px;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.skills-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.skills-section {
+  padding: 24px;
+}
+
+.skills-section h3 {
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.skill-item.has-skill {
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid var(--success);
+}
+
+.skill-item.missing-skill {
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid var(--danger);
+}
+
+.skill-icon {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.has-skill .skill-icon {
+  color: var(--success);
+}
+
+.missing-skill .skill-icon {
+  color: var(--danger);
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.recommendations-section {
+  padding: 32px;
+  margin-bottom: 40px;
+}
+
+.recommendations-section h3 {
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--light);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+}
+
+.rec-number {
+  width: 32px;
+  height: 32px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.rec-text {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.actions-section {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .skill-gap-page h1 {
+    font-size: 32px;
+  }
+
+  .skills-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .match-overview {
+    padding: 24px;
+  }
+
+  .circular-progress svg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .progress-text {
+    font-size: 28px;
+  }
+}

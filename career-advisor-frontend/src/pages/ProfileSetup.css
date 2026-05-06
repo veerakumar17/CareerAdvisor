@@ -1,0 +1,178 @@
+.profile-setup {
+  min-height: calc(100vh - 70px);
+  padding: 60px 20px;
+  background: var(--light);
+}
+
+.setup-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.progress-step {
+  position: relative;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.progress-step.active .step-circle {
+  background: var(--gradient);
+  color: white;
+}
+
+.step-content h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tag {
+  padding: 12px 24px;
+  border: 2px solid var(--border);
+  border-radius: 24px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.tag:hover {
+  border-color: var(--primary);
+}
+
+.tag.active {
+  background: var(--gradient);
+  color: white;
+  border-color: transparent;
+}
+
+.subject-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.subject-rating label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.2s ease;
+}
+
+.star:hover,
+.star.filled {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.interest-card {
+  padding: 24px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.interest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.interest-card.active {
+  border-color: var(--primary);
+  background: var(--gradient);
+  color: white;
+}
+
+.interest-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.interest-name {
+  font-weight: 600;
+}
+
+.step-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 16px;
+}
+
+.step-actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .setup-card {
+    padding: 24px;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subject-rating {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
